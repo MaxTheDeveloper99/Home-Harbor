@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Real Estate Platform</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Home<span>Harbor</span></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#virtual-tours">Virtual Tours</a></li>
+            <li><a href="#mortgage">Mortgage</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars" id="menu-icon"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Discover Your <span class="highlight">Dream Home</span> Today
+          </h1>
+          <p class="hero-subtitle">
+            Explore thousands of premium properties with immersive virtual tours
+            and expert guidance
+          </p>
+
+          <div class="hero-search">
+            <div class="search-tabs">
+              <button class="tab-btn active">Buy</button>
+              <button class="tab-btn">Rent</button>
+              <button class="tab-btn">Sell</button>
+            </div>
+            <div class="search-box">
+              <input
+                type="text"
+                placeholder="Search by location, property type, or keyword"
+              />
+              <button class="search-btn" id="hero-search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-value">10K+</div>
+              <div class="stat-label">Properties</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">95%</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">24/7</div>
+              <div class="stat-label">Support</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="image-container">
+            <img
+              src="./images/luxury-coastal-villa-with-panoramic-ocean-view.jpg"
+              alt="Luxury Home"
+              class="main-image"
+            />
+            <div class="image-badge">
+              <div class="badge-content">
+                <i class="fas fa-home"></i>
+                <span>Featured Property</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <div class="arrow-down"></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        <div class="search-container">
+          <h2>Advanced Property Search</h2>
+          <form id="property-search">
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input
+                type="text"
+                id="location"
+                placeholder="City, Neighborhood, or ZIP"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="property-type">Property Type</label>
+                <select id="property-type">
+                  <option value="">Any Type</option>
+                  <option value="house">House</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="condo">Condo</option>
+                  <option value="townhouse">Townhouse</option>
+                  <option value="land">Land</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="bedrooms">Bedrooms</label>
+                <select id="bedrooms">
+                  <option value="">Any</option>
+                  <option value="1">1+</option>
+                  <option value="2">2+</option>
+                  <option value="3">3+</option>
+                  <option value="4">4+</option>
+                  <option value="5">5+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="min-price">Min Price</label>
+                <select id="min-price">
+                  <option value="">No Min</option>
+                  <option value="100000">$100,000</option>
+                  <option value="200000">$200,000</option>
+                  <option value="300000">$300,000</option>
+                  <option value="400000">$400,000</option>
+                  <option value="500000">$500,000</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="max-price">Max Price</label>
+                <select id="max-price">
+                  <option value="">No Max</option>
+                  <option value="200000">$200,000</option>
+                  <option value="300000">$300,000</option>
+                  <option value="400000">$400,000</option>
+                  <option value="500000">$500,000</option>
+                  <option value="1000000">$1,000,000</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="keywords">Keywords</label>
+              <input
+                type="text"
+                id="keywords"
+                placeholder="Pool, Garage, Garden, etc."
+              />
+            </div>
+            <button type="submit" class="btn">Search Properties</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="properties" id="properties">
+      <div class="container">
+        <h2>Featured Properties</h2>
+        <div class="property-grid" id="property-grid">
+          <!-- Properties will be loaded here via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section class="virtual-tours" id="virtual-tours">
+      <div class="container">
+        <h2>Virtual Tours</h2>
+        <div class="tour-container">
+          <div class="tour-viewer" id="tour-viewer">
+            <div class="tour-placeholder">
+              <i class="fas fa-home"></i>
+              <p>Select a property to view virtual tour</p>
+            </div>
+          </div>
+          <div class="tour-thumbnails">
+            <div class="tour-thumb active" data-tour="1">
+              <img
+                src="./images/luxury-coastal-villa-with-panoramic-ocean-view.jpg"
+                alt="Property 1"
+              />
+              <div class="tour-info">
+                <h3>Luxury Villa</h3>
+                <p>5 Bed | 4 Bath | 3,500 sqft</p>
+              </div>
+            </div>
+            <div class="tour-thumb" data-tour="2">
+              <img
+                src="./images/centennial-place-atlanta-ga-building-photo.jpg"
+                alt="Property 2"
+              />
+              <div class="tour-info">
+                <h3>Modern Apartment</h3>
+                <p>2 Bed | 2 Bath | 1,200 sqft</p>
+              </div>
+            </div>
+            <div class="tour-thumb" data-tour="3">
+              <img
+                src="./images/charming-suburban-homes-nestled-picturesque-community.jpg"
+                alt="Property 3"
+              />
+              <div class="tour-info">
+                <h3>Suburban Home</h3>
+                <p>4 Bed | 3 Bath | 2,800 sqft</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mortgage-calculator" id="mortgage">
+      <div class="container">
+        <h2>Mortgage Calculator</h2>
+        <div class="calculator-container">
+          <div class="calculator-form">
+            <form id="mortgage-form">
+              <div class="form-group">
+                <label for="home-price">Home Price ($)</label>
+                <input type="number" id="home-price" value="500000" min="0" />
+              </div>
+              <div class="form-group">
+                <label for="down-payment">Down Payment ($)</label>
+                <input type="number" id="down-payment" value="100000" min="0" />
+              </div>
+              <div class="form-group">
+                <label for="loan-term">Loan Term (years)</label>
+                <select id="loan-term">
+                  <option value="15">15</option>
+                  <option value="30" selected>30</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="interest-rate">Interest Rate (%)</label>
+                <input
+                  type="number"
+                  id="interest-rate"
+                  value="3.5"
+                  step="0.1"
+                  min="0"
+                />
+              </div>
+              <button type="submit" class="btn">Calculate</button>
+            </form>
+          </div>
+          <div class="calculator-results">
+            <h3>Your Estimated Payment</h3>
+            <div class="result-item">
+              <span>Principal & Interest</span>
+              <span id="monthly-payment">$1,796.18</span>
+            </div>
+            <div class="result-item">
+              <span>Loan Amount</span>
+              <span id="loan-amount">$400,000.00</span>
+            </div>
+            <div class="result-item">
+              <span>Total Interest</span>
+              <span id="total-interest">$246,624.80</span>
+            </div>
+            <div class="result-item">
+              <span>Total Cost</span>
+              <span id="total-cost">$646,624.80</span>
+            </div>
+            <div class="disclaimer">
+              <p>
+                This calculator is for estimation purposes only. Actual rates
+                and terms may vary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>HomeHarbor</h3>
+            <p>
+              Your trusted partner in finding the perfect home with cutting-edge
+              technology and personalized service.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#properties">Properties</a></li>
+              <li><a href="#virtual-tours">Virtual Tours</a></li>
+              <li><a href="#mortgage">Mortgage Calculator</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, New
+              York, NY
+            </p>
+            <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@homeharbor.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 HomeHarbor. All rights reserved.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
