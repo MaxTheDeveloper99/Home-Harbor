@@ -935,3 +935,63 @@ footer {
     width: calc(100% + 20px);
   }
 }
+
+@media (max-width: 992px) {
+  .hero {
+    margin-top: 60px; /* Reduce margin to account for navbar */
+    padding-top: 20px; /* Add some padding at the top */
+    min-height: calc(100vh - 60px); /* Adjust height to account for navbar */
+  }
+
+  .hero-container {
+    padding-top: 40px; /* Reduce top padding */
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 50px;
+    min-height: calc(100vh - 50px);
+  }
+
+  .hero-title {
+    font-size: 2rem; /* Further reduce title size */
+    margin-top: 14rem; /* Add some top margin */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    margin-top: 50px;
+    min-height: auto; /* Let content determine height */
+    padding-bottom: 40px; /* Add bottom padding */
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    margin-top: 13rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 1.5rem; /* Reduce logo size */
+  }
+}
+
+.hero-content {
+  overflow: hidden; /* Prevent any content from bleeding out */
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    margin-top: 60px;
+    min-height: calc(100vh - 50px);
+  }
+
+  .hero-title {
+    font-size: 2rem; /* Further reduce title size */
+    margin-top: 23rem; /* Add some top margin */
+  }
+}
