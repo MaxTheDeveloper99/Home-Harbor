@@ -950,27 +950,27 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .hero {
+  /* .hero {
     margin-top: 50px;
     min-height: calc(100vh - 50px);
-  }
+  } */
 
   .hero-title {
     font-size: 2rem; /* Further reduce title size */
-    margin-top: 14rem; /* Add some top margin */
+    margin-top: 12rem; /* Add some top margin */
   }
 }
 
 @media (max-width: 576px) {
   .hero {
-    margin-top: 50px;
+    margin-top: 30px;
     min-height: auto; /* Let content determine height */
     padding-bottom: 40px; /* Add bottom padding */
   }
 
   .hero-title {
     font-size: 1.8rem;
-    margin-top: 13rem;
+    margin-top: 2rem;
   }
 }
 
@@ -985,10 +985,10 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  .hero {
+  /* .hero {
     margin-top: 60px;
     min-height: calc(100vh - 50px);
-  }
+  } */
 
   .hero-title {
     font-size: 2rem; /* Further reduce title size */
